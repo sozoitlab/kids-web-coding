@@ -1,0 +1,187 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Overview Section */
+.overviewSection {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.overviewCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  height: 100%;
+}
+
+.overviewCard:hover {
+  transform: translateY(-5px);
+}
+
+.overviewCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.overviewCard p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Demo Section */
+.demoSection {
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sectionDescription {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.demoContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.demoPlaceholder {
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #666;
+}
+
+/* Why Section */
+.whySection {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.reasonCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.reasonCard:hover {
+  transform: translateY(-5px);
+}
+
+.reasonCard h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.reasonCard p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Parents Section */
+.parentsSection {
+  padding: 4rem 0;
+}
+
+.parentsContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.parentsContent p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.parentsContent ul {
+  text-align: left;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  list-style-position: inside;
+}
+
+.parentsContent li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
