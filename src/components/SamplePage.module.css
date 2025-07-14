@@ -1,0 +1,256 @@
+.samplePage {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.description {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.description h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.techItem {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.techItem:hover {
+  transform: translateY(-5px);
+  border-color: #667eea;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+}
+
+.techIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.techItem strong {
+  display: block;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.techItem p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.tips {
+  background: linear-gradient(135deg, #e8f4fd, #d4edfc);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 2px solid #3498db;
+}
+
+.tips h3 {
+  text-align: center;
+  color: #2980b9;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.tipsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tipItem {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.1);
+}
+
+.tipItem:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
+}
+
+.tipIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.tipItem strong {
+  display: block;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tipItem p {
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.challenge {
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 2px solid #f39c12;
+}
+
+.challenge h3 {
+  text-align: center;
+  color: #e67e22;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.challengeList {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(243, 156, 18, 0.1);
+}
+
+.challengeList li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #fef9e7, #fdf2e9);
+  border-radius: 8px;
+  border-left: 4px solid #f39c12;
+  font-weight: 500;
+  color: #2c3e50;
+  transition: transform 0.3s ease;
+}
+
+.challengeList li:hover {
+  transform: translateX(5px);
+  background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
+}
+
+.challengeList li:last-child {
+  margin-bottom: 0;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .samplePage {
+    padding: 1rem;
+  }
+  
+  .header {
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .techGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tipItem {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .tipItem:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .description,
+  .tips,
+  .challenge {
+    padding: 1.5rem;
+  }
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header,
+.description,
+.tips,
+.challenge {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.techItem {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.techItem:nth-child(1) { animation-delay: 0.1s; }
+.techItem:nth-child(2) { animation-delay: 0.2s; }
+.techItem:nth-child(3) { animation-delay: 0.3s; }
+.techItem:nth-child(4) { animation-delay: 0.4s; }

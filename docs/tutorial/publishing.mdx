@@ -4,6 +4,9 @@ description: 作ったウェブサイトを世界中に公開する方法
 sidebar_position: 5
 ---
 
+import InteractiveChecklist from '@site/src/components/InteractiveChecklist';
+import QRCodeGenerator from '@site/src/components/QRCodeGenerator';
+
 # 🚀 サイトを公開しよう
 
 ついに、あなたの作品を世界中の人に見せる時が来ました！
@@ -110,23 +113,37 @@ my-website/
 
 ## 🎨 公開前のチェックリスト
 
-### 内容の確認
-- [ ] 誤字脱字はない？
-- [ ] 画像は全部表示される？
-- [ ] リンクは正しく動く？
-- [ ] 個人情報は載せていない？
+<InteractiveChecklist
+  title="内容の確認"
+  items={[
+    { id: "typo", label: "誤字脱字はない？" },
+    { id: "images", label: "画像は全部表示される？" },
+    { id: "links", label: "リンクは正しく動く？" },
+    { id: "privacy", label: "個人情報は載せていない？" }
+  ]}
+/>
 
-### デザインの確認
-- [ ] 色は見やすい？
-- [ ] 文字は読みやすい？
-- [ ] スマホでも見られる？
-- [ ] レイアウトは崩れていない？
+<InteractiveChecklist
+  title="デザインの確認"
+  items={[
+    { id: "colors", label: "色は見やすい？" },
+    { id: "readability", label: "文字は読みやすい？" },
+    { id: "mobile", label: "スマホでも見られる？" },
+    { id: "layout", label: "レイアウトは崩れていない？" }
+  ]}
+/>
 
-### ファイルの確認
-- [ ] index.htmlがある？
-- [ ] CSSファイルは読み込まれている？
-- [ ] 画像のパスは正しい？
-- [ ] ファイル名に日本語を使っていない？
+<InteractiveChecklist
+  title="ファイルの確認"
+  items={[
+    { id: "index", label: "index.htmlがある？" },
+    { id: "css", label: "CSSファイルは読み込まれている？" },
+    { id: "paths", label: "画像のパスは正しい？" },
+    { id: "filename", label: "ファイル名に日本語を使っていない？" }
+  ]}
+/>
+
+<QRCodeGenerator />
 
 ## 🔧 よくあるトラブル
 
@@ -170,9 +187,10 @@ https://[ユーザー名].github.io/[リポジトリ名]/
 ```
 
 ### 2. QRコードを作る
-- Google で「QRコード作成」を検索
-- URLを入力してQRコードを生成
-- 印刷して配る
+上のQRコードジェネレーターを使って、簡単にQRコードを作成できます！
+- URLを入力するだけで自動生成
+- ダウンロードして保存
+- 印刷して配布
 
 ### 3. SNSで共有（保護者と相談）
 - 家族のSNSで紹介してもらう

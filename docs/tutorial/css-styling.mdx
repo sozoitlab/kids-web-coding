@@ -1,0 +1,692 @@
+---
+title: CSSでスタイリング
+description: ウェブサイトをきれいにデザインしよう
+sidebar_position: 3
+---
+
+import CodeExample from '@site/src/components/CodeExample';
+
+# 🎨 CSSでスタイリング
+
+CSSは「Cascading Style Sheets」の略で、HTMLで作った骨組みに色やデザインを付ける言語です。
+
+## 🌈 CSSって何？
+
+### 身近な例で考えよう
+CSSは、お絵かきの色鉛筆のようなもの：
+- 🎨 **色** = 文字や背景の色
+- 📏 **大きさ** = 文字やボックスのサイズ
+- 🖼️ **配置** = どこに置くか
+- ✨ **効果** = 影や丸みなど
+
+### CSSの書き方
+```css
+セレクタ {
+  プロパティ: 値;
+}
+```
+
+## 🎯 CSSの基本
+
+### HTMLにCSSを追加する方法
+
+#### 1. styleタグを使う
+```html
+<head>
+  <style>
+    h1 {
+      color: blue;
+    }
+  </style>
+</head>
+```
+
+#### 2. style属性を使う（インライン）
+
+<CodeExample
+  title="インラインスタイル"
+  html={`<h1 style="color: red;">赤い見出し</h1>
+<p style="color: blue; font-size: 18px;">青い文字で少し大きめ</p>`}
+/>
+
+#### 3. 外部ファイルを読み込む
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+## 🖌️ 文字のスタイル
+
+### 色を変える
+
+<CodeExample
+  title="文字の色"
+  html={`<h2 class="color-red">赤色の見出し</h2>
+<h2 class="color-hex">16進数で指定</h2>
+<h2 class="color-rgb">RGB値で緑色</h2>`}
+  css={`.color-red {
+  color: red;
+}
+
+.color-hex {
+  color: #6B6BFF;
+}
+
+.color-rgb {
+  color: rgb(77, 189, 116);
+}`}
+/>
+
+### 文字の大きさ
+
+<CodeExample
+  title="文字サイズ"
+  html={`<p class="text-small">小さな文字（12px）</p>
+<p class="text-normal">普通の文字（16px）</p>
+<p class="text-large">大きな文字（24px）</p>
+<p class="text-relative">相対的に大きな文字（2em）</p>`}
+  css={`.text-small {
+  font-size: 12px;
+}
+
+.text-normal {
+  font-size: 16px;
+}
+
+.text-large {
+  font-size: 24px;
+}
+
+.text-relative {
+  font-size: 2em;
+}`}
+/>
+
+### 文字の種類（フォント）
+
+<CodeExample
+  title="フォントの種類"
+  html={`<p class="font-serif">明朝体風のフォント</p>
+<p class="font-sans-serif">ゴシック体風のフォント</p>
+<p class="font-cursive">手書き風のフォント</p>
+<p class="font-monospace">等幅フォント</p>`}
+  css={`.font-serif {
+  font-family: serif;
+}
+
+.font-sans-serif {
+  font-family: sans-serif;
+}
+
+.font-cursive {
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.font-monospace {
+  font-family: monospace;
+}`}
+/>
+
+### 文字の装飾
+
+<CodeExample
+  title="文字装飾"
+  html={`<p class="text-bold">太字のテキスト</p>
+<p class="text-italic">斜体のテキスト</p>
+<p class="text-underline">下線付きテキスト</p>
+<p class="text-strike">取り消し線</p>
+<p class="text-shadow">影付きテキスト</p>`}
+  css={`.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-strike {
+  text-decoration: line-through;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px gray;
+}`}
+/>
+
+## 🎨 背景のデザイン
+
+### 背景色
+
+<CodeExample
+  title="背景色"
+  html={`<div class="bg-lightblue">
+  薄い青色の背景
+</div>
+<div class="bg-pink">
+  ピンク色の背景（16進数）
+</div>
+<div class="bg-lightyellow">
+  薄い黄色の背景（RGB）
+</div>`}
+  css={`.bg-lightblue {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.bg-pink {
+  background-color: #FFE4E1;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.bg-lightyellow {
+  background-color: rgb(255, 255, 224);
+  padding: 20px;
+  margin-top: 10px;
+}`}
+/>
+
+### グラデーション
+
+<CodeExample
+  title="グラデーション背景"
+  html={`<div class="gradient-horizontal">
+  左から右へのグラデーション
+</div>
+<div class="gradient-vertical">
+  上から下へのグラデーション
+</div>
+<div class="gradient-diagonal">
+  斜めのグラデーション
+</div>`}
+  css={`.gradient-horizontal {
+  background: linear-gradient(to right, pink, purple);
+  padding: 30px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.gradient-vertical {
+  background: linear-gradient(to bottom, #FF6B6B, #4ECDC4);
+  padding: 30px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.gradient-diagonal {
+  background: linear-gradient(45deg, #FFE66D, #FF6B6B);
+  padding: 30px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+}`}
+/>
+
+## 📦 ボックスモデル
+
+### パディング（内側の余白）
+
+<CodeExample
+  title="パディング"
+  html={`<div class="padding-small">
+  パディング10px（全方向）
+</div>
+<div class="padding-asymmetric">
+  上下20px、左右40px
+</div>
+<div class="padding-individual">
+  上下30px、左右10px（個別指定）
+</div>`}
+  css={`.padding-small {
+  background-color: #E3F2FD;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.padding-asymmetric {
+  background-color: #FFE4E1;
+  padding: 20px 40px;
+  margin-bottom: 10px;
+}
+
+.padding-individual {
+  background-color: #E8F5E9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}`}
+/>
+
+### マージン（外側の余白）
+
+<CodeExample
+  title="マージン"
+  html={`<div class="margin-all">
+  マージン20px（全方向）
+</div>
+<div class="margin-center">
+  左右中央寄せ（margin: 0 auto）
+</div>`}
+  css={`.margin-all {
+  background-color: #F3E5F4;
+  padding: 20px;
+  margin: 20px;
+}
+
+.margin-center {
+  background-color: #FFF3E0;
+  padding: 20px;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}`}
+/>
+
+### ボーダー（枠線）
+
+<CodeExample
+  title="枠線の種類"
+  html={`<div class="border-solid">
+  実線の枠線（solid）
+</div>
+<div class="border-dotted">
+  点線の枠線（dotted）
+</div>
+<div class="border-dashed">
+  破線の枠線（dashed）
+</div>
+<div class="border-double">
+  二重線の枠線（double）
+</div>
+<div class="border-rounded">
+  角が丸い枠線
+</div>`}
+  css={`.border-solid {
+  border: 2px solid black;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.border-dotted {
+  border: 3px dotted red;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.border-dashed {
+  border: 3px dashed blue;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.border-double {
+  border: 5px double green;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.border-rounded {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+}`}
+/>
+
+## 🎯 実践！きれいなカードを作ろう
+
+<CodeExample
+  title="素敵なカード"
+  html={`<div class="card">
+  <h2 class="card-title">私のカード</h2>
+  <p class="card-text">これは素敵なカードです。</p>
+  <button class="card-button">クリック！</button>
+</div>`}
+  css={`.card {
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.card-text {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card-button:hover {
+  background-color: #45a049;
+}`}
+/>
+
+## ✨ 特殊効果
+
+### 影をつける
+
+<CodeExample
+  title="影の効果"
+  html={`<h1 class="shadow-text">テキストの影</h1>
+<div class="shadow-box">
+  ボックスの影
+</div>
+<div class="shadow-glow">
+  光るような影
+</div>`}
+  css={`.shadow-text {
+  text-shadow: 3px 3px 5px gray;
+}
+
+.shadow-box {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.shadow-glow {
+  background-color: #FF6B6B;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+  border-radius: 10px;
+  text-align: center;
+}`}
+/>
+
+### ホバー効果
+
+<CodeExample
+  title="ホバー効果"
+  html={`<button class="hover-button">マウスを乗せてみて！</button>
+<div class="hover-card">ホバーカード</div>`}
+  css={`.hover-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hover-button:hover {
+  background-color: #1976D2;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+.hover-card {
+  background-color: #f0f0f0;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.hover-card:hover {
+  background-color: #FFE66D;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}`}
+/>
+
+### アニメーション
+
+<CodeExample
+  title="アニメーション"
+  html={`<div class="bouncing">バウンス！</div>
+<div class="rotating">回転中...</div>`}
+  css={`@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.bouncing {
+  background-color: #4ECDC4;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 10px;
+  animation: bounce 1s infinite;
+  display: inline-block;
+}
+
+.rotating {
+  background-color: #FF6B6B;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 10px;
+  animation: rotate 2s linear infinite;
+  display: inline-block;
+}`}
+/>
+
+## 📱 レスポンシブデザイン
+
+### 画面サイズに合わせる
+```css
+/* スマホサイズ */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* タブレットサイズ */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+```
+
+## 🎨 カラーパレット例
+
+### パステルカラー
+
+<CodeExample
+  title="パステルカラーパレット"
+  html={`<div class="color-palette">
+  <div class="pastel-pink">ピンク</div>
+  <div class="pastel-blue">ブルー</div>
+  <div class="pastel-green">グリーン</div>
+  <div class="pastel-yellow">イエロー</div>
+  <div class="pastel-purple">パープル</div>
+</div>`}
+  css={`.color-palette {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pastel-pink {
+  background-color: #FFE5E5;
+  padding: 20px;
+  text-align: center;
+}
+
+.pastel-blue {
+  background-color: #E5F3FF;
+  padding: 20px;
+  text-align: center;
+}
+
+.pastel-green {
+  background-color: #E5FFE5;
+  padding: 20px;
+  text-align: center;
+}
+
+.pastel-yellow {
+  background-color: #FFFFE5;
+  padding: 20px;
+  text-align: center;
+}
+
+.pastel-purple {
+  background-color: #F3E5FF;
+  padding: 20px;
+  text-align: center;
+}`}
+/>
+
+### ネオンカラー
+
+<CodeExample
+  title="ネオンカラー"
+  html={`<div class="neon-container">
+  <span class="neon-pink">ネオンピンク</span>
+  <span class="neon-green">ネオングリーン</span>
+  <span class="neon-blue">ネオンブルー</span>
+  <span class="neon-yellow">ネオンイエロー</span>
+</div>`}
+  css={`.neon-container {
+  background-color: black;
+  padding: 20px;
+}
+
+.neon-pink {
+  color: #FF10F0;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.neon-green {
+  color: #39FF14;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.neon-blue {
+  color: #00FFFF;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.neon-yellow {
+  color: #FFFF00;
+  font-size: 24px;
+}`}
+/>
+
+## 🏃 練習問題
+
+### 問題1: カラフルな見出し
+h1タグを虹色のグラデーションにしてみよう！
+
+### 問題2: ボタンデザイン
+押したくなるようなボタンを3種類作ってみよう！
+
+### 問題3: カードレイアウト
+自己紹介カードを作って、影や丸みをつけてみよう！
+
+## 🔍 よくある間違い
+
+### 1. セミコロンの忘れ
+```css
+/* ❌ 間違い */
+h1 {
+  color: red
+  font-size: 24px;
+}
+
+/* ✅ 正しい */
+h1 {
+  color: red;
+  font-size: 24px;
+}
+```
+
+### 2. 単位の忘れ
+```css
+/* ❌ 間違い */
+p {
+  font-size: 16;
+}
+
+/* ✅ 正しい */
+p {
+  font-size: 16px;
+}
+```
+
+### 3. スペルミス
+```css
+/* ❌ 間違い */
+h1 {
+  color: red;      /* colour は間違い、color が正しい */
+  font-weight: bold; /* bolt は間違い、bold が正しい */
+}
+```
+
+## 💡 デザインのコツ
+
+### Do（やるべきこと）
+- ✅ 色は3〜4色まで
+- ✅ 余白を十分にとる
+- ✅ 読みやすいフォントサイズ
+- ✅ コントラストをつける
+
+### Don't（避けるべきこと）
+- ❌ 色を使いすぎる
+- ❌ 文字を小さくしすぎる
+- ❌ 派手すぎるアニメーション
+- ❌ 読みにくい色の組み合わせ
+
+## 📚 まとめ
+
+今日学んだこと：
+- ✅ CSSの基本的な書き方
+- ✅ 文字と背景のスタイル
+- ✅ ボックスモデル
+- ✅ 特殊効果
+- ✅ レスポンシブデザイン
+
+## 🚀 次のステップ
+
+CSSの基礎ができたら、次は[CSSで楽しく装飾](/docs/tutorial/)してみましょう！
+
+:::tip 💡 チャレンジ
+学んだCSSを使って、自分だけのオリジナルデザインを作ってみよう！
+:::

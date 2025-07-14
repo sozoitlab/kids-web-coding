@@ -4,6 +4,8 @@ description: ウェブサイトの骨組みを作ろう
 sidebar_position: 2
 ---
 
+import CodeExample from '@site/src/components/CodeExample';
+
 # 🏗️ HTMLの基礎
 
 HTMLは「HyperText Markup Language」の略で、ウェブサイトの骨組みを作る言語です。
@@ -42,44 +44,49 @@ HTMLは、本や新聞と似ています：
 ### 基本的なタグ
 
 #### 1. 見出しタグ
-```html
-<h1>一番大きい見出し</h1>
+
+<CodeExample
+  title="見出しの種類"
+  html={`<h1>一番大きい見出し</h1>
 <h2>二番目に大きい見出し</h2>
 <h3>三番目に大きい見出し</h3>
 <h4>四番目に大きい見出し</h4>
 <h5>五番目に大きい見出し</h5>
-<h6>一番小さい見出し</h6>
-```
+<h6>一番小さい見出し</h6>`}
+/>
 
 #### 2. 段落タグ
-```html
-<p>これは段落です。普通の文章を書くときに使います。</p>
-<p>新しい段落は、新しいpタグで始めます。</p>
-```
+
+<CodeExample
+  title="段落の作り方"
+  html={`<p>これは段落です。普通の文章を書くときに使います。</p>
+<p>新しい段落は、新しいpタグで始めます。</p>`}
+/>
 
 #### 3. 改行タグ
-```html
-<p>一行目<br>
+
+<CodeExample
+  title="改行の使い方"
+  html={`<p>一行目<br>
 二行目<br>
-三行目</p>
-```
+三行目</p>`}
+/>
 
 ## 🖼️ 画像を表示する
 
 ### imgタグの使い方
-```html
-<img src="画像のURL" alt="画像の説明">
-```
 
-### 実際の例
-```html
-<img src="https://example.com/cat.jpg" alt="かわいい猫の写真">
-```
+<CodeExample
+  title="画像の表示"
+  html={`<img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=サンプル画像" alt="サンプル画像">`}
+/>
 
 ### 画像のサイズを変える
-```html
-<img src="cat.jpg" alt="猫" width="300" height="200">
-```
+
+<CodeExample
+  title="画像サイズの調整"
+  html={`<img src="https://via.placeholder.com/400x300/4ECDC4/FFFFFF?text=大きな画像" alt="大きな画像" width="200" height="150">`}
+/>
 
 :::tip 💡 ポイント
 alt属性は必ず書こう！画像が表示されないときや、目の不自由な人のために大切です。
@@ -88,50 +95,44 @@ alt属性は必ず書こう！画像が表示されないときや、目の不�
 ## 🔗 リンクを作る
 
 ### aタグの使い方
-```html
-<a href="リンク先のURL">クリックする文字</a>
-```
 
-### 実際の例
-```html
-<a href="https://www.google.com">Googleを開く</a>
-<a href="https://www.youtube.com">YouTubeを見る</a>
-```
+<CodeExample
+  title="基本的なリンク"
+  html={`<a href="https://www.google.com">Googleを開く</a>
+<br><br>
+<a href="https://www.youtube.com">YouTubeを見る</a>`}
+/>
 
 ### 新しいタブで開く
-```html
-<a href="https://example.com" target="_blank">新しいタブで開く</a>
-```
+
+<CodeExample
+  title="新しいタブで開くリンク"
+  html={`<a href="https://example.com" target="_blank">新しいタブで開く</a>`}
+/>
 
 ## 📋 リストを作る
 
 ### 番号なしリスト
-```html
-<ul>
+
+<CodeExample
+  title="番号なしリスト"
+  html={`<ul>
   <li>りんご</li>
   <li>みかん</li>
   <li>ぶどう</li>
-</ul>
-```
-
-結果：
-- りんご
-- みかん
-- ぶどう
+</ul>`}
+/>
 
 ### 番号付きリスト
-```html
-<ol>
+
+<CodeExample
+  title="番号付きリスト"
+  html={`<ol>
   <li>朝起きる</li>
   <li>顔を洗う</li>
   <li>朝ごはんを食べる</li>
-</ol>
-```
-
-結果：
-1. 朝起きる
-2. 顔を洗う
-3. 朝ごはんを食べる
+</ol>`}
+/>
 
 ## 🎯 実践！自己紹介ページを作ろう
 
@@ -149,47 +150,50 @@ alt属性は必ず書こう！画像が表示されないときや、目の不�
 ```
 
 ### ステップ2: 内容を追加
-```html
-<body>
-  <h1>○○のホームページへようこそ！</h1>
-  
-  <h2>自己紹介</h2>
-  <p>こんにちは！○○です。</p>
-  <p>プログラミングを勉強しています。</p>
-  
-  <h2>好きなもの</h2>
-  <ul>
-    <li>ゲーム</li>
-    <li>読書</li>
-    <li>スポーツ</li>
-  </ul>
-  
-  <h2>好きな写真</h2>
-  <img src="favorite.jpg" alt="お気に入りの写真">
-  
-  <h2>リンク</h2>
-  <p>よく見るサイト：</p>
-  <a href="https://scratch.mit.edu/">Scratch</a>
-</body>
-```
+
+<CodeExample
+  title="自己紹介ページの例"
+  html={`<h1>○○のホームページへようこそ！</h1>
+
+<h2>自己紹介</h2>
+<p>こんにちは！○○です。</p>
+<p>プログラミングを勉強しています。</p>
+
+<h2>好きなもの</h2>
+<ul>
+  <li>ゲーム</li>
+  <li>読書</li>
+  <li>スポーツ</li>
+</ul>
+
+<h2>好きな写真</h2>
+<img src="https://via.placeholder.com/200x150/FFE66D/333333?text=お気に入り" alt="お気に入りの写真">
+
+<h2>リンク</h2>
+<p>よく見るサイト：</p>
+<a href="https://scratch.mit.edu/">Scratch</a>`}
+/>
 
 ## 🎨 特殊な文字
 
 ### よく使う特殊文字
-```html
-&lt;    <!-- < -->
-&gt;    <!-- > -->
-&amp;   <!-- & -->
-&copy;  <!-- © -->
-&hearts; <!-- ♥ -->
-&star;  <!-- ☆ -->
-```
+
+<CodeExample
+  title="特殊文字の表示"
+  html={`&lt; より小さい &gt;<br>
+&amp; アンパサンド<br>
+&copy; コピーライト<br>
+&hearts; ハート<br>
+&star; 星`}
+/>
 
 ## 📊 表を作る（上級）
 
 ### tableタグの使い方
-```html
-<table>
+
+<CodeExample
+  title="基本的な表"
+  html={`<table border="1">
   <tr>
     <th>名前</th>
     <th>年齢</th>
@@ -202,8 +206,8 @@ alt属性は必ず書こう！画像が表示されないときや、目の不�
     <td>花子</td>
     <td>11歳</td>
   </tr>
-</table>
-```
+</table>`}
+/>
 
 ## 🏃 練習問題
 
@@ -223,24 +227,28 @@ alt属性は必ず書こう！画像が表示されないときや、目の不�
 ## 🔍 よくある間違い
 
 ### 1. タグの閉じ忘れ
-```html
-<!-- ❌ 間違い -->
+
+<CodeExample
+  title="タグの閉じ忘れ"
+  html={`<!-- ❌ 間違い -->
 <h1>見出し
 <p>段落</p>
 
 <!-- ✅ 正しい -->
 <h1>見出し</h1>
-<p>段落</p>
-```
+<p>段落</p>`}
+/>
 
 ### 2. タグの入れ子ミス
-```html
-<!-- ❌ 間違い -->
+
+<CodeExample
+  title="タグの入れ子"
+  html={`<!-- ❌ 間違い -->
 <p>段落の<strong>中で</p></strong>
 
 <!-- ✅ 正しい -->
-<p>段落の<strong>中で</strong></p>
-```
+<p>段落の<strong>中で</strong></p>`}
+/>
 
 ### 3. 属性の書き方
 ```html

@@ -63,11 +63,21 @@ function DemoSection() {
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>完成作品デモ</Heading>
         <p className={styles.sectionDescription}>講座で作成するホームページのサンプルです</p>
-        <div className={styles.demoContainer}>
-          <div className={styles.demoPlaceholder}>
-            <p>CodePenデモがここに表示されます</p>
-          </div>
-        </div>
+        <iframe
+          height="500"
+          style={{width: '100%'}}
+          scrolling="no"
+          title="introduce"
+          src="https://codepen.io/sxvwefjj/embed/ogXKMdm?default-tab=html%2Cresult"
+          frameBorder="no"
+          loading="lazy"
+          allowTransparency={true}
+          allowFullScreen={true}
+        >
+          See the Pen <a href="https://codepen.io/sxvwefjj/pen/ogXKMdm">
+          introduce</a> by 松下貴紀 (<a href="https://codepen.io/sxvwefjj">@sxvwefjj</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
       </div>
     </section>
   );
@@ -139,9 +149,6 @@ function CTASection() {
         <div className={styles.ctaButtons}>
           <Link className="button button--primary button--lg" to="/docs/preparation/environment">
             事前準備をはじめる
-          </Link>
-          <Link className="button button--outline button--lg" href="#contact">
-            お問い合わせ
           </Link>
         </div>
       </div>

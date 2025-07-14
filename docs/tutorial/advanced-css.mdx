@@ -1,0 +1,510 @@
+---
+title: CSSで楽しく装飾しよう
+description: CSSを使ってウェブサイトをもっとカラフルで楽しくしよう
+sidebar_position: 4
+---
+
+import CodeExample from '@site/src/components/CodeExample';
+
+# 🎨 CSSで楽しく装飾しよう
+
+CSSの魔法を使って、ウェブサイトをもっとカラフルで楽しくしましょう！
+
+## 🌈 色をもっと楽しく使おう
+
+### グラデーション（色の変化）
+
+<CodeExample
+  title="虹色のボックス"
+  html={`<div class="rainbow-box">
+  虹色のボックス！
+</div>`}
+  css={`.rainbow-box {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+}`}
+/>
+
+### いろんなグラデーション
+
+<CodeExample
+  title="夕焼けボックス"
+  html={`<div class="sunset-box">
+  夕焼けのような色！
+</div>`}
+  css={`.sunset-box {
+  background: linear-gradient(to bottom, #FF6B6B, #FFE66D);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+}`}
+/>
+
+<CodeExample
+  title="斜めのグラデーション"
+  html={`<div class="diagonal-box">
+  斜めのグラデーション！
+</div>`}
+  css={`.diagonal-box {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+}`}
+/>
+
+<CodeExample
+  title="円形のグラデーション"
+  html={`<div class="circle-gradient">
+  円形グラデーション！
+</div>`}
+  css={`.circle-gradient {
+  background: radial-gradient(circle, #ffeaa7, #fab1a0);
+  padding: 40px;
+  border-radius: 50%;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}`}
+/>
+
+## 🎭 影をつけて立体的に
+
+### ボックスの影
+
+<CodeExample
+  title="基本の影"
+  html={`<div class="shadow-card">
+  影がついたカード
+</div>`}
+  css={`.shadow-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}`}
+/>
+
+<CodeExample
+  title="カラフルな影"
+  html={`<div class="colorful-shadow">
+  カラフルな影！
+</div>`}
+  css={`.colorful-shadow {
+  background-color: #FF6B6B;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.5);
+  text-align: center;
+  font-weight: bold;
+}`}
+/>
+
+### 文字の影
+
+<CodeExample
+  title="文字に影をつける"
+  html={`<h2 class="shadow-text">影つき文字！</h2>`}
+  css={`.shadow-text {
+  font-size: 48px;
+  color: #FF6B6B;
+  text-shadow: 3px 3px 0px #FFE66D;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}`}
+/>
+
+<CodeExample
+  title="光る文字"
+  html={`<h2 class="glow-text">ネオン風！</h2>`}
+  css={`.glow-text {
+  font-size: 36px;
+  color: white;
+  text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+  border-radius: 10px;
+}`}
+/>
+
+## 🎪 枠線（ボーダー）を楽しく
+
+<CodeExample
+  title="いろんな枠線"
+  html={`<div class="border-examples">
+  <div class="dotted-box">点線</div>
+  <div class="dashed-box">破線</div>
+  <div class="double-box">二重線</div>
+</div>`}
+  css={`.border-examples {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dotted-box {
+  border: 3px dotted #FF6B6B;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.dashed-box {
+  border: 3px dashed #4ECDC4;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.double-box {
+  border: 5px double #45B7D1;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}`}
+/>
+
+## 🎯 形を変えてみよう
+
+<CodeExample
+  title="いろんな形"
+  html={`<div class="shapes">
+  <div class="circle">円</div>
+  <div class="oval">楕円</div>
+  <div class="triangle"></div>
+</div>`}
+  css={`.shapes {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #FF6B6B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.oval {
+  width: 150px;
+  height: 100px;
+  background-color: #4ECDC4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #FFE66D;
+}`}
+/>
+
+## 🎬 アニメーション効果
+
+### 基本のアニメーション
+
+<CodeExample
+  title="回転するボックス"
+  html={`<div class="spinning-box"></div>`}
+  css={`.spinning-box {
+  width: 100px;
+  height: 100px;
+  background-color: #FF6B6B;
+  animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}`}
+/>
+
+<CodeExample
+  title="脈動するボックス"
+  html={`<div class="pulse-box"></div>`}
+  css={`.pulse-box {
+  width: 100px;
+  height: 100px;
+  background-color: #4ECDC4;
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+  margin: 20px auto;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}`}
+/>
+
+<CodeExample
+  title="跳ねるボール"
+  html={`<div class="bouncing-ball"></div>`}
+  css={`.bouncing-ball {
+  width: 50px;
+  height: 50px;
+  background-color: #FFE66D;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 1s ease-in-out infinite;
+  margin: 50px auto 20px;
+}
+
+@keyframes bounce {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-50px); 
+  }
+}`}
+/>
+
+### ホバー効果（マウスを乗せたとき）
+
+<CodeExample
+  title="ホバーボタン"
+  html={`<button class="hover-button">マウスを乗せてね！</button>`}
+  css={`.hover-button {
+  background-color: #45B7D1;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hover-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(69, 183, 209, 0.5);
+}`}
+/>
+
+## 🎨 楽しい装飾パターン
+
+### メッセージカード
+
+<CodeExample
+  title="キラキラメッセージカード"
+  html={`<div class="message-card">
+  <h3>おめでとう！</h3>
+  <p>CSSマスターになったね！</p>
+</div>`}
+  css={`.message-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.message-card::before {
+  content: "✨";
+  position: absolute;
+  font-size: 100px;
+  opacity: 0.1;
+  right: -20px;
+  top: -20px;
+  transform: rotate(-15deg);
+}
+
+.message-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.message-card p {
+  margin: 0;
+  font-size: 16px;
+}`}
+/>
+
+### 吹き出し
+
+<CodeExample
+  title="吹き出し"
+  html={`<div class="speech-bubble">
+  こんにちは！元気？
+</div>`}
+  css={`.speech-bubble {
+  background-color: #E3F2FD;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #E3F2FD;
+}`}
+/>
+
+## 🏃 実践！オリジナルデザイン
+
+### プロフィールカード
+
+<CodeExample
+  title="プロフィールカード"
+  html={`<div class="profile-card">
+  <div class="avatar">😊</div>
+  <h3>たろうくん</h3>
+  <p>プログラミング大好き！</p>
+  <div class="skills">
+    <span class="skill">HTML</span>
+    <span class="skill">CSS</span>
+  </div>
+</div>`}
+  css={`.profile-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #FFE66D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin: 0 auto 15px;
+}
+
+.profile-card h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.profile-card p {
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.skills {
+  margin-top: 20px;
+}
+
+.skill {
+  display: inline-block;
+  background-color: #E3F2FD;
+  color: #2196F3;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 14px;
+}`}
+/>
+
+## 🎯 練習問題
+
+### 問題1: 虹色ボタンを作ろう
+- グラデーション背景
+- ホバーで色が変わる
+- 影がつく
+
+### 問題2: アニメーションするローディング
+- 回転する円
+- 色が変化する
+- 大きさも変わる
+
+### 問題3: ゲーム風ステータスバー
+- HPバーのような見た目
+- グラデーション
+- アニメーション付き
+
+## 💡 デザインのコツ
+
+### 色の組み合わせ
+- 🔵 青 + 🟢 緑 = さわやか
+- 🔴 赤 + 🟡 黄 = 元気
+- 🟣 紫 + 🔵 青 = 神秘的
+- 🟠 オレンジ + 🟡 黄 = 明るい
+
+### 余白を大切に
+```css
+.good-spacing {
+  padding: 20px;  /* 内側の余白 */
+  margin: 15px;   /* 外側の余白 */
+}
+```
+
+### 統一感を出す
+- 同じ角の丸み（border-radius）
+- 同じ影の強さ
+- 同じアニメーション時間
+
+## 📚 まとめ
+
+今日学んだこと：
+- ✅ グラデーションの作り方
+- ✅ 影のつけ方
+- ✅ いろんな形の作り方
+- ✅ アニメーション効果
+- ✅ ホバー効果
+
+## 🚀 次のステップ
+
+素敵なデザインができたら、いよいよ[サイトを公開](/docs/tutorial/publishing)してみましょう！
+
+:::note 🎨 デザインチャレンジ
+学んだ技術を全部使って、自分だけのオリジナルページを作ってみよう！
+:::

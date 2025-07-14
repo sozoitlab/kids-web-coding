@@ -1,0 +1,96 @@
+.codeExample {
+  margin: 2rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--ifm-background-surface-color);
+}
+
+.title {
+  margin: 0;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  font-size: 1.1rem;
+}
+
+.preview {
+  padding: 1rem;
+  background: white;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.previewLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-secondary-darkest);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.previewContent {
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+  background: #fafafa;
+  min-height: 80px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.toggleButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--ifm-color-emphasis-100);
+  border: none;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--ifm-font-color-base);
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.toggleButton:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.codeContainer {
+  padding: 1rem;
+  background: var(--ifm-background-color);
+}
+
+.codeLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-secondary-darkest);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.codeContainer pre {
+  margin: 0 0 1rem 0;
+}
+
+.codeContainer pre:last-child {
+  margin-bottom: 0;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .preview {
+  background: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .previewContent {
+  background: var(--ifm-background-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+/* Ensure preview content styles are isolated */
+.previewContent * {
+  margin: 0;
+}
+
+.previewContent > *:not(:last-child) {
+  margin-bottom: 1rem;
+}

@@ -133,17 +133,8 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: 'お問い合わせ',
-          items: [
-            {
-              label: 'お問い合わせフォーム',
-              href: '#contact',
-            },
-          ],
-        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} キッズWebコーディング講座. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} キッズWebコーディング講座`,
     },
     prism: {
       theme: prismThemes.github,
