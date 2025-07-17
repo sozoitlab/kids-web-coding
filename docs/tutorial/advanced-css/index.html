@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ja" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tutorial/advanced-css" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">CSSで楽しく装飾しよう | キッズWebコーディング講座</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://kids-web-coding.github.io/kids-web-coding/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://kids-web-coding.github.io/kids-web-coding/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://kids-web-coding.github.io/kids-web-coding/docs/tutorial/advanced-css"><meta data-rh="true" property="og:locale" content="ja"><meta data-rh="true" name="docusaurus_locale" content="ja"><meta data-rh="true" name="docsearch:language" content="ja"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="CSSで楽しく装飾しよう | キッズWebコーディング講座"><meta data-rh="true" name="description" content="CSSを使ってウェブサイトをもっとカラフルで楽しくしよう"><meta data-rh="true" property="og:description" content="CSSを使ってウェブサイトをもっとカラフルで楽しくしよう"><link data-rh="true" rel="icon" href="/kids-web-coding/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://kids-web-coding.github.io/kids-web-coding/docs/tutorial/advanced-css"><link data-rh="true" rel="alternate" href="https://kids-web-coding.github.io/kids-web-coding/docs/tutorial/advanced-css" hreflang="ja"><link data-rh="true" rel="alternate" href="https://kids-web-coding.github.io/kids-web-coding/docs/tutorial/advanced-css" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CSSで楽しく装飾しよう","item":"https://kids-web-coding.github.io/kids-web-coding/docs/tutorial/advanced-css"}]}</script><link rel="stylesheet" href="/kids-web-coding/assets/css/styles.f7dcf07e.css">
+<script src="/kids-web-coding/assets/js/runtime~main.a7b40859.js" defer="defer"></script>
+<script src="/kids-web-coding/assets/js/main.d4a4ccda.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/kids-web-coding/img/logo.svg"><div role="region" aria-label="メインコンテンツまでスキップ"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">メインコンテンツまでスキップ</a></div><nav aria-label="ナビゲーション" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="ナビゲーションバーを開く" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/kids-web-coding/"><div class="navbar__logo"><img src="/kids-web-coding/img/logo.svg" alt="キッズWebコーディング講座ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/kids-web-coding/img/logo.svg" alt="キッズWebコーディング講座ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">キッズWebコーディング講座</b></a><a class="navbar__item navbar__link" href="/kids-web-coding/docs/preparation/environment">事前準備</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/kids-web-coding/docs/tutorial/introduction">チュートリアル</a><a class="navbar__item navbar__link" href="/kids-web-coding/docs/reference/html-tags">リファレンス</a><a class="navbar__item navbar__link" href="/kids-web-coding/docs/support/faq">サポート</a><a class="navbar__item navbar__link" href="/kids-web-coding/docs/next-steps">次のステップ</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="システムモード" aria-label="ダークモードを切り替える(現在はシステムモード)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="先頭へ戻る" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="ドキュメントのサイドバー" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/kids-web-coding/docs/tutorial/introduction">チュートリアル</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/kids-web-coding/docs/tutorial/introduction">はじめに</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/kids-web-coding/docs/tutorial/html-basics">HTMLの基礎</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/kids-web-coding/docs/tutorial/css-styling">CSSでスタイリング</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/kids-web-coding/docs/tutorial/advanced-css">CSSで楽しく装飾しよう</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/kids-web-coding/docs/tutorial/publishing">サイトを公開しよう</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/kids-web-coding/docs/tutorial/sample-page">実践サンプル - 自己紹介ページ</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="パンくずリストのナビゲーション"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="ホームページ" class="breadcrumbs__link" href="/kids-web-coding/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">チュートリアル</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">CSSで楽しく装飾しよう</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">このページの見出し</button></div><div class="theme-doc-markdown markdown"><header><h1>🎨 CSSで楽しく装飾しよう</h1></header>
+<p>CSSの魔法を使って、ウェブサイトをもっとカラフルで楽しくしましょう！</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-色をもっと楽しく使おう">🌈 色をもっと楽しく使おう<a href="#-色をもっと楽しく使おう" class="hash-link" aria-label="🌈 色をもっと楽しく使おう への直接リンク" title="🌈 色をもっと楽しく使おう への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="グラデーション色の変化">グラデーション（色の変化）<a href="#グラデーション色の変化" class="hash-link" aria-label="グラデーション（色の変化） への直接リンク" title="グラデーション（色の変化） への直接リンク">​</a></h3>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">虹色のボックス</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.rainbow-box {
+background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+padding: 20px;
+color: white;
+text-align: center;
+border-radius: 10px;
+font-weight: bold;
+}</style><div class="rainbow-box">
+虹色のボックス！
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="いろんなグラデーション">いろんなグラデーション<a href="#いろんなグラデーション" class="hash-link" aria-label="いろんなグラデーション への直接リンク" title="いろんなグラデーション への直接リンク">​</a></h3>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">夕焼けボックス</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.sunset-box {
+background: linear-gradient(to bottom, #FF6B6B, #FFE66D);
+padding: 30px;
+border-radius: 15px;
+text-align: center;
+font-weight: bold;
+}</style><div class="sunset-box">
+夕焼けのような色！
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">斜めのグラデーション</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.diagonal-box {
+background: linear-gradient(45deg, #667eea, #764ba2);
+color: white;
+padding: 30px;
+border-radius: 15px;
+text-align: center;
+font-weight: bold;
+}</style><div class="diagonal-box">
+斜めのグラデーション！
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">円形のグラデーション</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.circle-gradient {
+background: radial-gradient(circle, #ffeaa7, #fab1a0);
+padding: 40px;
+border-radius: 50%;
+text-align: center;
+width: 200px;
+height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+}</style><div class="circle-gradient">
+円形グラデーション！
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-影をつけて立体的に">🎭 影をつけて立体的に<a href="#-影をつけて立体的に" class="hash-link" aria-label="🎭 影をつけて立体的に への直接リンク" title="🎭 影をつけて立体的に への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ボックスの影">ボックスの影<a href="#ボックスの影" class="hash-link" aria-label="ボックスの影 への直接リンク" title="ボックスの影 への直接リンク">​</a></h3>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">基本の影</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.shadow-card {
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+text-align: center;
+}</style><div class="shadow-card">
+影がついたカード
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">カラフルな影</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.colorful-shadow {
+background-color: #FF6B6B;
+color: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 5px 20px rgba(255, 107, 107, 0.5);
+text-align: center;
+font-weight: bold;
+}</style><div class="colorful-shadow">
+カラフルな影！
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="文字の影">文字の影<a href="#文字の影" class="hash-link" aria-label="文字の影 への直接リンク" title="文字の影 への直接リンク">​</a></h3>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">文字に影をつける</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.shadow-text {
+font-size: 48px;
+color: #FF6B6B;
+text-shadow: 3px 3px 0px #FFE66D;
+font-weight: bold;
+text-align: center;
+margin: 0;
+}</style><h2 class="shadow-text">影つき文字！</h2></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">光る文字</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.glow-text {
+font-size: 36px;
+color: white;
+text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+background-color: #333;
+padding: 20px;
+text-align: center;
+margin: 0;
+border-radius: 10px;
+}</style><h2 class="glow-text">ネオン風！</h2></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-枠線ボーダーを楽しく">🎪 枠線（ボーダー）を楽しく<a href="#-枠線ボーダーを楽しく" class="hash-link" aria-label="🎪 枠線（ボーダー）を楽しく への直接リンク" title="🎪 枠線（ボーダー）を楽しく への直接リンク">​</a></h2>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">いろんな枠線</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.border-examples {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.dotted-box {
+border: 3px dotted #FF6B6B;
+padding: 20px;
+text-align: center;
+flex: 1;
+}
+
+.dashed-box {
+border: 3px dashed #4ECDC4;
+padding: 20px;
+text-align: center;
+flex: 1;
+}
+
+.double-box {
+border: 5px double #45B7D1;
+padding: 20px;
+text-align: center;
+flex: 1;
+}</style><div class="border-examples">
+<div class="dotted-box">点線</div>
+<div class="dashed-box">破線</div>
+<div class="double-box">二重線</div>
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-形を変えてみよう">🎯 形を変えてみよう<a href="#-形を変えてみよう" class="hash-link" aria-label="🎯 形を変えてみよう への直接リンク" title="🎯 形を変えてみよう への直接リンク">​</a></h2>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">いろんな形</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.shapes {
+display: flex;
+gap: 20px;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.circle {
+width: 100px;
+height: 100px;
+background-color: #FF6B6B;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-weight: bold;
+}
+
+.oval {
+width: 150px;
+height: 100px;
+background-color: #4ECDC4;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-weight: bold;
+}
+
+.triangle {
+width: 0;
+height: 0;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-bottom: 100px solid #FFE66D;
+}</style><div class="shapes">
+<div class="circle">円</div>
+<div class="oval">楕円</div>
+<div class="triangle"></div>
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-アニメーション効果">🎬 アニメーション効果<a href="#-アニメーション効果" class="hash-link" aria-label="🎬 アニメーション効果 への直接リンク" title="🎬 アニメーション効果 への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="基本のアニメーション">基本のアニメーション<a href="#基本のアニメーション" class="hash-link" aria-label="基本のアニメーション への直接リンク" title="基本のアニメーション への直接リンク">​</a></h3>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">回転するボックス</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.spinning-box {
+width: 100px;
+height: 100px;
+background-color: #FF6B6B;
+animation: spin 2s linear infinite;
+margin: 20px auto;
+}
+
+@keyframes spin {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}</style><div class="spinning-box"></div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">脈動するボックス</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.pulse-box {
+width: 100px;
+height: 100px;
+background-color: #4ECDC4;
+border-radius: 50%;
+animation: pulse 1.5s ease-in-out infinite;
+margin: 20px auto;
+}
+
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.2); }
+100% { transform: scale(1); }
+}</style><div class="pulse-box"></div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">跳ねるボール</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.bouncing-ball {
+width: 50px;
+height: 50px;
+background-color: #FFE66D;
+border-radius: 50%;
+position: relative;
+animation: bounce 1s ease-in-out infinite;
+margin: 50px auto 20px;
+}
+
+@keyframes bounce {
+0%, 100% { 
+  transform: translateY(0); 
+}
+50% { 
+  transform: translateY(-50px); 
+}
+}</style><div class="bouncing-ball"></div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ホバー効果マウスを乗せたとき">ホバー効果（マウスを乗せたとき）<a href="#ホバー効果マウスを乗せたとき" class="hash-link" aria-label="ホバー効果（マウスを乗せたとき） への直接リンク" title="ホバー効果（マウスを乗せたとき） への直接リンク">​</a></h3>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">ホバーボタン</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.hover-button {
+background-color: #45B7D1;
+color: white;
+padding: 15px 30px;
+border: none;
+border-radius: 50px;
+font-size: 18px;
+cursor: pointer;
+transition: all 0.3s;
+}
+
+.hover-button:hover {
+background-color: #2980b9;
+transform: scale(1.1);
+box-shadow: 0 5px 20px rgba(69, 183, 209, 0.5);
+}</style><button class="hover-button">マウスを乗せてね！</button></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-楽しい装飾パターン">🎨 楽しい装飾パターン<a href="#-楽しい装飾パターン" class="hash-link" aria-label="🎨 楽しい装飾パターン への直接リンク" title="🎨 楽しい装飾パターン への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="メッセージカード">メッセージカード<a href="#メッセージカード" class="hash-link" aria-label="メッセージカード への直接リンク" title="メッセージカード への直接リンク">​</a></h3>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">キラキラメッセージカード</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.message-card {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+padding: 30px;
+border-radius: 20px;
+position: relative;
+overflow: hidden;
+text-align: center;
+}
+
+.message-card::before {
+content: "✨";
+position: absolute;
+font-size: 100px;
+opacity: 0.1;
+right: -20px;
+top: -20px;
+transform: rotate(-15deg);
+}
+
+.message-card h3 {
+margin: 0 0 10px 0;
+font-size: 24px;
+}
+
+.message-card p {
+margin: 0;
+font-size: 16px;
+}</style><div class="message-card">
+<h3>おめでとう！</h3>
+<p>CSSマスターになったね！</p>
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="吹き出し">吹き出し<a href="#吹き出し" class="hash-link" aria-label="吹き出し への直接リンク" title="吹き出し への直接リンク">​</a></h3>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">吹き出し</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.speech-bubble {
+background-color: #E3F2FD;
+padding: 20px;
+border-radius: 20px;
+position: relative;
+display: inline-block;
+margin-bottom: 30px;
+}
+
+.speech-bubble::after {
+content: "";
+position: absolute;
+bottom: -10px;
+left: 30px;
+width: 0;
+height: 0;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-top: 10px solid #E3F2FD;
+}</style><div class="speech-bubble">
+こんにちは！元気？
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-実践オリジナルデザイン">🏃 実践！オリジナルデザイン<a href="#-実践オリジナルデザイン" class="hash-link" aria-label="🏃 実践！オリジナルデザイン への直接リンク" title="🏃 実践！オリジナルデザイン への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="プロフィールカード">プロフィールカード<a href="#プロフィールカード" class="hash-link" aria-label="プロフィールカード への直接リンク" title="プロフィールカード への直接リンク">​</a></h3>
+<div class="codeExample_EQEg"><h4 class="title_ymS3">プロフィールカード</h4><div class="preview_H7fI"><div class="previewLabel_nGg9">実際の表示：</div><div class="previewContent_vogw"><style>.profile-card {
+background: white;
+padding: 30px;
+border-radius: 20px;
+text-align: center;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s;
+max-width: 300px;
+margin: 20px auto;
+}
+
+.profile-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card .avatar {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+background-color: #FFE66D;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 50px;
+margin: 0 auto 15px;
+}
+
+.profile-card h3 {
+margin: 10px 0;
+color: #333;
+}
+
+.profile-card p {
+color: #666;
+margin: 10px 0 20px;
+}
+
+.skills {
+margin-top: 20px;
+}
+
+.skill {
+display: inline-block;
+background-color: #E3F2FD;
+color: #2196F3;
+padding: 5px 15px;
+border-radius: 20px;
+margin: 5px;
+font-size: 14px;
+}</style><div class="profile-card">
+<div class="avatar">😊</div>
+<h3>たろうくん</h3>
+<p>プログラミング大好き！</p>
+<div class="skills">
+  <span class="skill">HTML</span>
+  <span class="skill">CSS</span>
+</div>
+</div></div></div><button class="toggleButton_gsD8">▶ コードを見る</button></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-練習問題">🎯 練習問題<a href="#-練習問題" class="hash-link" aria-label="🎯 練習問題 への直接リンク" title="🎯 練習問題 への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="問題1-虹色ボタンを作ろう">問題1: 虹色ボタンを作ろう<a href="#問題1-虹色ボタンを作ろう" class="hash-link" aria-label="問題1: 虹色ボタンを作ろう への直接リンク" title="問題1: 虹色ボタンを作ろう への直接リンク">​</a></h3>
+<ul>
+<li>グラデーション背景</li>
+<li>ホバーで色が変わる</li>
+<li>影がつく</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="問題2-アニメーションするローディング">問題2: アニメーションするローディング<a href="#問題2-アニメーションするローディング" class="hash-link" aria-label="問題2: アニメーションするローディング への直接リンク" title="問題2: アニメーションするローディング への直接リンク">​</a></h3>
+<ul>
+<li>回転する円</li>
+<li>色が変化する</li>
+<li>大きさも変わる</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="問題3-ゲーム風ステータスバー">問題3: ゲーム風ステータスバー<a href="#問題3-ゲーム風ステータスバー" class="hash-link" aria-label="問題3: ゲーム風ステータスバー への直接リンク" title="問題3: ゲーム風ステータスバー への直接リンク">​</a></h3>
+<ul>
+<li>HPバーのような見た目</li>
+<li>グラデーション</li>
+<li>アニメーション付き</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-デザインのコツ">💡 デザインのコツ<a href="#-デザインのコツ" class="hash-link" aria-label="💡 デザインのコツ への直接リンク" title="💡 デザインのコツ への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="色の組み合わせ">色の組み合わせ<a href="#色の組み合わせ" class="hash-link" aria-label="色の組み合わせ への直接リンク" title="色の組み合わせ への直接リンク">​</a></h3>
+<ul>
+<li>🔵 青 + 🟢 緑 = さわやか</li>
+<li>🔴 赤 + 🟡 黄 = 元気</li>
+<li>🟣 紫 + 🔵 青 = 神秘的</li>
+<li>🟠 オレンジ + 🟡 黄 = 明るい</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="余白を大切に">余白を大切に<a href="#余白を大切に" class="hash-link" aria-label="余白を大切に への直接リンク" title="余白を大切に への直接リンク">​</a></h3>
+<div class="language-css codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-css codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token selector class" style="color:#00009f">.good-spacing</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">padding</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token unit">px</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic">/* 内側の余白 */</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">margin</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">15</span><span class="token unit">px</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">   </span><span class="token comment" style="color:#999988;font-style:italic">/* 外側の余白 */</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="統一感を出す">統一感を出す<a href="#統一感を出す" class="hash-link" aria-label="統一感を出す への直接リンク" title="統一感を出す への直接リンク">​</a></h3>
+<ul>
+<li>同じ角の丸み（border-radius）</li>
+<li>同じ影の強さ</li>
+<li>同じアニメーション時間</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-まとめ">📚 まとめ<a href="#-まとめ" class="hash-link" aria-label="📚 まとめ への直接リンク" title="📚 まとめ への直接リンク">​</a></h2>
+<p>今日学んだこと：</p>
+<ul>
+<li>✅ グラデーションの作り方</li>
+<li>✅ 影のつけ方</li>
+<li>✅ いろんな形の作り方</li>
+<li>✅ アニメーション効果</li>
+<li>✅ ホバー効果</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-次のステップ">🚀 次のステップ<a href="#-次のステップ" class="hash-link" aria-label="🚀 次のステップ への直接リンク" title="🚀 次のステップ への直接リンク">​</a></h2>
+<p>素敵なデザインができたら、いよいよ<a href="/kids-web-coding/docs/tutorial/publishing">サイトを公開</a>してみましょう！</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>🎨 デザインチャレンジ</div><div class="admonitionContent_BuS1"><p>学んだ技術を全部使って、自分だけのオリジナルページを作ってみよう！</p></div></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/takanori-matsushita/kids-web-coding/tree/main/docs/tutorial/advanced-css.mdx" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>このページを編集</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="ドキュメントページ"><a class="pagination-nav__link pagination-nav__link--prev" href="/kids-web-coding/docs/tutorial/css-styling"><div class="pagination-nav__sublabel">前へ</div><div class="pagination-nav__label">CSSでスタイリング</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/kids-web-coding/docs/tutorial/publishing"><div class="pagination-nav__sublabel">次へ</div><div class="pagination-nav__label">サイトを公開しよう</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#-色をもっと楽しく使おう" class="table-of-contents__link toc-highlight">🌈 色をもっと楽しく使おう</a><ul><li><a href="#グラデーション色の変化" class="table-of-contents__link toc-highlight">グラデーション（色の変化）</a></li><li><a href="#いろんなグラデーション" class="table-of-contents__link toc-highlight">いろんなグラデーション</a></li></ul></li><li><a href="#-影をつけて立体的に" class="table-of-contents__link toc-highlight">🎭 影をつけて立体的に</a><ul><li><a href="#ボックスの影" class="table-of-contents__link toc-highlight">ボックスの影</a></li><li><a href="#文字の影" class="table-of-contents__link toc-highlight">文字の影</a></li></ul></li><li><a href="#-枠線ボーダーを楽しく" class="table-of-contents__link toc-highlight">🎪 枠線（ボーダー）を楽しく</a></li><li><a href="#-形を変えてみよう" class="table-of-contents__link toc-highlight">🎯 形を変えてみよう</a></li><li><a href="#-アニメーション効果" class="table-of-contents__link toc-highlight">🎬 アニメーション効果</a><ul><li><a href="#基本のアニメーション" class="table-of-contents__link toc-highlight">基本のアニメーション</a></li><li><a href="#ホバー効果マウスを乗せたとき" class="table-of-contents__link toc-highlight">ホバー効果（マウスを乗せたとき）</a></li></ul></li><li><a href="#-楽しい装飾パターン" class="table-of-contents__link toc-highlight">🎨 楽しい装飾パターン</a><ul><li><a href="#メッセージカード" class="table-of-contents__link toc-highlight">メッセージカード</a></li><li><a href="#吹き出し" class="table-of-contents__link toc-highlight">吹き出し</a></li></ul></li><li><a href="#-実践オリジナルデザイン" class="table-of-contents__link toc-highlight">🏃 実践！オリジナルデザイン</a><ul><li><a href="#プロフィールカード" class="table-of-contents__link toc-highlight">プロフィールカード</a></li></ul></li><li><a href="#-練習問題" class="table-of-contents__link toc-highlight">🎯 練習問題</a><ul><li><a href="#問題1-虹色ボタンを作ろう" class="table-of-contents__link toc-highlight">問題1: 虹色ボタンを作ろう</a></li><li><a href="#問題2-アニメーションするローディング" class="table-of-contents__link toc-highlight">問題2: アニメーションするローディング</a></li><li><a href="#問題3-ゲーム風ステータスバー" class="table-of-contents__link toc-highlight">問題3: ゲーム風ステータスバー</a></li></ul></li><li><a href="#-デザインのコツ" class="table-of-contents__link toc-highlight">💡 デザインのコツ</a><ul><li><a href="#色の組み合わせ" class="table-of-contents__link toc-highlight">色の組み合わせ</a></li><li><a href="#余白を大切に" class="table-of-contents__link toc-highlight">余白を大切に</a></li><li><a href="#統一感を出す" class="table-of-contents__link toc-highlight">統一感を出す</a></li></ul></li><li><a href="#-まとめ" class="table-of-contents__link toc-highlight">📚 まとめ</a></li><li><a href="#-次のステップ" class="table-of-contents__link toc-highlight">🚀 次のステップ</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">講座内容</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/kids-web-coding/docs/preparation/environment">事前準備</a></li><li class="footer__item"><a class="footer__link-item" href="/kids-web-coding/docs/tutorial/introduction">チュートリアル</a></li><li class="footer__item"><a class="footer__link-item" href="/kids-web-coding/docs/reference/html-tags">リファレンス</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">サポート</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/kids-web-coding/docs/support/faq">よくある質問</a></li><li class="footer__item"><a class="footer__link-item" href="/kids-web-coding/docs/support/parents">保護者向けガイド</a></li><li class="footer__item"><a class="footer__link-item" href="/kids-web-coding/docs/support/instructors">講師向けガイド</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 キッズWebコーディング講座</div></div></div></footer></div>
+</body>
+</html>
