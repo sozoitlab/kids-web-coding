@@ -34,7 +34,6 @@ const sidebars: SidebarsConfig = {
         'tutorial/css-styling',
         'tutorial/advanced-css',
         'tutorial/publishing',
-        'tutorial/sample-page',
       ],
     },
   ],
