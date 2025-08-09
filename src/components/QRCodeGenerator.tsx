@@ -4,6 +4,7 @@ import styles from './QRCodeGenerator.module.css';
 
 export default function QRCodeGenerator() {
   const [url, setUrl] = useState('');
+  const [name, setName] = useState('');
   const [qrCodeDataURL, setQrCodeDataURL] = useState('');
   const [isValidUrl, setIsValidUrl] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -73,7 +74,8 @@ export default function QRCodeGenerator() {
     if (!qrCodeDataURL) return;
 
     const link = document.createElement('a');
-    link.download = `qrcode-${colorScheme}.png`;
+    const filename = name ? `qrcode-${name.replace(/\s+/g, '-')}-${colorScheme}.png` : `qrcode-${colorScheme}.png`;
+    link.download = filename;
     link.href = qrCodeDataURL;
     document.body.appendChild(link);
     link.click();
@@ -88,15 +90,18 @@ export default function QRCodeGenerator() {
       printWindow.document.write(`
         <html>
           <head>
-            <title>QRコード - ${url}</title>
+            <title>QRコード - ${name || url}</title>
             <style>
+              @media print {
+                body { padding: 20px; }
+                .container { max-width: 100%; }
+              }
               body { 
                 font-family: 'Segoe UI', Arial, sans-serif; 
                 text-align: center; 
-                padding: 40px 20px; 
+                padding: 20px; 
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                 margin: 0;
-                min-height: 100vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -104,48 +109,59 @@ export default function QRCodeGenerator() {
               }
               .container {
                 background: white;
-                padding: 40px;
+                padding: 30px;
                 border-radius: 20px;
                 box-shadow: 0 20px 40px rgba(0,0,0,0.1);
                 max-width: 500px;
               }
               h1 { 
                 color: #333; 
-                margin: 0 0 30px 0;
-                font-size: 28px;
+                margin: 0 0 20px 0;
+                font-size: 24px;
+              }
+              .name-badge {
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 25px;
+                display: inline-block;
+                margin-bottom: 15px;
+                font-size: 18px;
+                font-weight: bold;
               }
               img { 
                 max-width: 100%; 
                 height: auto; 
                 border-radius: 15px;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                max-height: 250px;
               }
               .url { 
                 word-break: break-all; 
-                margin: 30px 0; 
-                font-size: 14px;
+                margin: 20px 0; 
+                font-size: 12px;
                 background: #f8f9fa;
-                padding: 15px;
+                padding: 12px;
                 border-radius: 10px;
                 font-family: monospace;
               }
               .instructions {
                 color: #666;
-                font-size: 16px;
-                line-height: 1.6;
+                font-size: 14px;
+                line-height: 1.5;
               }
               .qr-frame {
                 background: white;
-                padding: 20px;
+                padding: 15px;
                 border-radius: 15px;
                 display: inline-block;
-                margin: 20px 0;
+                margin: 15px 0;
               }
             </style>
           </head>
           <body>
             <div class="container">
-              <h1>🌟 私のウェブサイト 🌟</h1>
+              <h1>🌟 ${name ? name + 'さんの' : '私の'}ウェブサイト 🌟</h1>
               <div class="qr-frame">
                 <img src="${qrCodeDataURL}" alt="QRコード" />
               </div>
@@ -196,6 +212,23 @@ export default function QRCodeGenerator() {
       </div>
 
       <div className={styles.inputSection}>
+        <div className={styles.inputWrapper}>
+          <label htmlFor="name-input" className={styles.label}>
+            👤 あなたの名前
+          </label>
+          <div className={styles.inputContainer}>
+            <span className={styles.inputIcon}>✏️</span>
+            <input
+              id="name-input"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="なまえを入力してね"
+              className={styles.input}
+            />
+          </div>
+        </div>
+
         <div className={styles.inputWrapper}>
           <label htmlFor="url-input" className={styles.label}>
             🌐 ウェブサイトのURL
@@ -275,7 +308,7 @@ export default function QRCodeGenerator() {
           </div>
           
           <div className={styles.urlDisplay}>
-            <div className={styles.urlHeader}>📝 あなたのサイト</div>
+            <div className={styles.urlHeader}>📝 {name ? `${name}さんのサイト` : 'あなたのサイト'}</div>
             <div className={styles.urlText}>{url}</div>
           </div>
 
