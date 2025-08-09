@@ -42,7 +42,7 @@ function CourseOverview() {
           <div className="col col--4">
             <div className={styles.overviewCard}>
               <h3>⏰ 講座時間</h3>
-              <p>3時間（休憩含む）</p>
+              <p>約3時間弱（休憩含む）</p>
             </div>
           </div>
           <div className="col col--4">
@@ -63,21 +63,11 @@ function DemoSection() {
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>完成作品デモ</Heading>
         <p className={styles.sectionDescription}>講座で作成するホームページのサンプルです</p>
-        <iframe
-          height="500"
-          style={{width: '100%'}}
-          scrolling="no"
-          title="introduce"
-          src="https://codepen.io/sxvwefjj/embed/ogXKMdm?default-tab=html%2Cresult"
-          frameBorder="no"
-          loading="lazy"
-          allowTransparency={true}
-          allowFullScreen={true}
-        >
-          See the Pen <a href="https://codepen.io/sxvwefjj/pen/ogXKMdm">
-          introduce</a> by 松下貴紀 (<a href="https://codepen.io/sxvwefjj">@sxvwefjj</a>)
-          on <a href="https://codepen.io">CodePen</a>.
-        </iframe>
+        <iframe height="600" style={{width: '100%'}} scrolling="no" title="Untitled" src="https://codepen.io/sxvwefjj/embed/NPGvyPq?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/sxvwefjj/pen/NPGvyPq">
+  Untitled</a> by 松下貴紀 (<a href="https://codepen.io/sxvwefjj">@sxvwefjj</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
       </div>
     </section>
   );
@@ -156,6 +146,21 @@ function CTASection() {
   );
 }
 
+function QuestionnaireSection() {
+  return(
+    <section className={styles.parentsSection}>
+      <div className="container">
+        <Heading as="h2" className={styles.sectionTitle}>講座参加後のアンケート</Heading>
+        <div className={styles.ctaButtons}>
+          <a className="button button--primary button--lg" href='https://docs.google.com/forms/d/e/1FAIpQLSdO1Gy_XvrhjcRMhoBJb2fFbU1TgLKFBSBVSxvMoMblclzvuA/viewform' target='_blank'>
+            アンケートに回答する
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -169,6 +174,7 @@ export default function Home(): ReactNode {
         <WhyLearnCoding />
         <ParentsSection />
         <CTASection />
+        <QuestionnaireSection />
       </main>
     </Layout>
   );

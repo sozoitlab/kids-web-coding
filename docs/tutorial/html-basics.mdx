@@ -19,18 +19,46 @@ HTMLは、本や新聞と似ています：
 - 🖼️ **写真** = イメージ
 - 🔗 **目次** = 他のページへのリンク
 
-### HTMLの基本構造
+## 🎯 まずは自己紹介ページを作ってみよう
+
+### ステップ1: 基本構造
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ページのタイトル</title>
-  </head>
-  <body>
-    <h1>ここに内容を書く</h1>
-  </body>
+<head>
+  <title>○○の自己紹介</title>
+</head>
+<body>
+  <!-- ここに内容を書く -->
+</body>
 </html>
 ```
+
+### ステップ2: 内容を追加
+
+<CodeExample
+  title="自己紹介ページの例"
+  html={`<div class="main">
+<h1 class="page-title">○○のホームページへようこそ！</h1>
+<h2 class="section-title intro-section">👋 自己紹介</h2>
+<p class="text">こんにちは！○○です。</p>
+<p class="text">プログラミングを勉強しています。</p>
+
+<h2 class="section-title hobby-section">❤️ 好きなもの</h2>
+<ul class="hobby-list">
+<li class="hobby-item">ゲーム</li>
+<li class="hobby-item">読書</li>
+<li class="hobby-item">スポーツ</li>
+</ul>
+
+<h2 class="section-title photo-section">📸 好きな写真</h2>
+<img class="favorite-photo" src="https://dummyimage.com/700x400/eee/aaa&text=お気に入り" alt="お気に入りの写真">
+
+<h2 class="section-title link-section">🔗 リンク</h2>
+<p class="text">よく見るサイト：</p>
+<a class="external-link" href="https://scratch.mit.edu/" target="_blank">🚀 Scratch</a>
+</div>`}
+/>
 
 ## 🏷️ タグの使い方
 
@@ -74,18 +102,55 @@ HTMLは、本や新聞と似ています：
 
 ## 🖼️ 画像を表示する
 
+### 無料で使える画像サイト
+
+#### 1. いらすとや
+- **URL**: https://www.irasutoya.com/
+- かわいいイラストがたくさん！
+- 日本語で検索できる
+
+#### 2. Unsplash
+- **URL**: https://unsplash.com/
+- きれいな写真が無料
+- 英語で検索
+
+#### 3. Pixabay
+- **URL**: https://pixabay.com/ja/
+- イラストも写真もある
+- 日本語対応
+
+### 画像の使い方
+1. **検索する**
+   ```
+   例: 「猫」「花」「宇宙」
+   ```
+
+2. **使用方法**
+   - 右クリック → 「画像のリンクをコピー」
+   - タグのsrc属性に貼り付ける
+
+3. **サイズを選ぶ**
+   - 小さいサイズで十分
+   - 大きすぎると表示が遅くなる
+
+:::tip 💡 画像選びのコツ
+- 明るくてはっきりした画像を選ぼう
+- 文字が読みやすい背景を選ぼう
+- テーマに合った画像を使おう
+:::
+
 ### imgタグの使い方
 
 <CodeExample
   title="画像の表示"
-  html={`<img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=サンプル画像" alt="サンプル画像">`}
+  html={`<img src="https://dummyimage.com/400x300/eee/aaa&text=サンプル画像" alt="サンプル画像">`}
 />
 
 ### 画像のサイズを変える
 
 <CodeExample
   title="画像サイズの調整"
-  html={`<img src="https://via.placeholder.com/400x300/4ECDC4/FFFFFF?text=大きな画像" alt="大きな画像" width="200" height="150">`}
+  html={`<img src="https://dummyimage.com/700x400/eee/aaa&text=大きな画像" alt="大きな画像" width="700" height="0">`}
 />
 
 :::tip 💡 ポイント
@@ -134,46 +199,6 @@ alt属性は必ず書こう！画像が表示されないときや、目の不�
 </ol>`}
 />
 
-## 🎯 実践！自己紹介ページを作ろう
-
-### ステップ1: 基本構造
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>○○の自己紹介</title>
-</head>
-<body>
-  <!-- ここに内容を書く -->
-</body>
-</html>
-```
-
-### ステップ2: 内容を追加
-
-<CodeExample
-  title="自己紹介ページの例"
-  html={`<h1>○○のホームページへようこそ！</h1>
-
-<h2>自己紹介</h2>
-<p>こんにちは！○○です。</p>
-<p>プログラミングを勉強しています。</p>
-
-<h2>好きなもの</h2>
-<ul>
-  <li>ゲーム</li>
-  <li>読書</li>
-  <li>スポーツ</li>
-</ul>
-
-<h2>好きな写真</h2>
-<img src="https://via.placeholder.com/200x150/FFE66D/333333?text=お気に入り" alt="お気に入りの写真">
-
-<h2>リンク</h2>
-<p>よく見るサイト：</p>
-<a href="https://scratch.mit.edu/">Scratch</a>`}
-/>
-
 ## 🎨 特殊な文字
 
 ### よく使う特殊文字
@@ -193,36 +218,33 @@ alt属性は必ず書こう！画像が表示されないときや、目の不�
 
 <CodeExample
   title="基本的な表"
-  html={`<table border="1">
+  html={`<table>
   <tr>
     <th>名前</th>
+    <th>誕生日</th>
     <th>年齢</th>
+    <th>学校名</th>
+    <th>好きなもの</th>
+    <th>趣味</th>
   </tr>
   <tr>
     <td>太郎</td>
+    <td>1月1日</td>
     <td>10歳</td>
+    <td>〇〇小学校</td>
+    <td>ハンバーグ</td>
+    <td>カード集め</td>
   </tr>
   <tr>
     <td>花子</td>
+    <td>12月25日</td>
     <td>11歳</td>
+    <td>✕✕小学校</td>
+    <td>ケーキ</td>
+    <td>お花を育てる</td>
   </tr>
 </table>`}
 />
-
-## 🏃 練習問題
-
-### 問題1: 基本のページ
-以下の要素を含むページを作ってください：
-1. 大きな見出し
-2. 自己紹介の段落
-3. 好きなものリスト
-4. 画像を1つ
-
-### 問題2: リンク集
-好きなサイトへのリンクを5つ作ってください。
-
-### 問題3: 日記ページ
-今日の出来事を書いた日記ページを作ってください。
 
 ## 🔍 よくある間違い
 

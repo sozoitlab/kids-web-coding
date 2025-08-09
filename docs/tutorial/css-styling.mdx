@@ -49,9 +49,20 @@ CSSは、お絵かきの色鉛筆のようなもの：
 <p style="color: blue; font-size: 18px;">青い文字で少し大きめ</p>`}
 />
 
-#### 3. 外部ファイルを読み込む
+#### 3. CSSファイルを読み込む(今回はこの方法を使います)
 ```html
 <link rel="stylesheet" href="style.css">
+<body>
+  <h1 class="page-title">〇〇のホームページへようこそ！</h1>
+<body>
+```
+
+```css
+.page-title {
+  font-size: 24px; /* 文字のサイズ変更 */
+  color: blue; /* 文字の色を青色に変更 */
+  font-weight: bold; /* 文字の太さを変更 */
+}
 ```
 
 ## 🖌️ 文字のスタイル
@@ -75,6 +86,11 @@ CSSは、お絵かきの色鉛筆のようなもの：
   color: rgb(77, 189, 116);
 }`}
 />
+
+### 色選びツール
+- **Google カラーピッカー**: 「カラーピッカー」で検索
+- **Coolors.co**: https://coolors.co/
+- **Adobe Color**: https://color.adobe.com/ja/
 
 ### 文字の大きさ
 
@@ -610,16 +626,111 @@ CSSは、お絵かきの色鉛筆のようなもの：
 }`}
 />
 
-## 🏃 練習問題
+## さっき作ったHTMLにCSSをつけくわえてデザインしてみよう！
+```css
+/* 全体のリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-### 問題1: カラフルな見出し
-h1タグを虹色のグラデーションにしてみよう！
+body {
+  background-color: #ffb3d9; /* ピンク色の背景 */
+  font-size: 16px; /* 基本の文字サイズ */
+  margin: 0; /* 外側の余白なし */
+  padding: 20px; /* 周りの余白 */
+}
 
-### 問題2: ボタンデザイン
-押したくなるようなボタンを3種類作ってみよう！
+/* メインコンテナ */
+.main {
+  background-color: white; /* 白い背景 */
+  margin: 0 auto; /* 中央に配置 */
+  padding: 30px; /* 内側の余白 */
+}
 
-### 問題3: カードレイアウト
-自己紹介カードを作って、影や丸みをつけてみよう！
+/* メインタイトル */
+.page-title {
+  color: #ff1493; /* 濃いピンク色 */
+  text-align: center; /* 中央揃え */
+  font-size: 32px; /* 大きな文字 */
+  font-weight: bold; /* 太字 */
+  margin: 0 0 30px 0; /* 下の余白 */
+  padding: 0; /* 余白なし */
+}
+
+.test {
+  color: red;
+  font-size: 30px;
+}
+
+/* セクションタイトル */
+.section-title {
+  color: #4169e1; /* 青色 */
+  font-size: 24px; /* 大きめの文字 */
+  font-weight: bold; /* 太字 */
+  margin: 25px 0 15px 0; /* 上下の余白 */
+  padding: 10px; /* 内側の余白 */
+  background-color: #87ceeb; /* 水色の背景 */
+  text-align: center; /* 中央揃え */
+}
+
+/* 文章の設定 */
+.text {
+  font-size: 18px; /* 少し大きめの文字 */
+  color: #333; /* 濃いグレー色 */
+  margin: 15px 0; /* 上下の余白 */
+  padding: 15px; /* 内側の余白 */
+  background-color: #fffacd; /* 薄い黄色の背景 */
+  text-align: left; /* 左揃え */
+}
+
+/* リストの設定 */
+.hobby-list {
+  margin: 20px 0; /* 上下の余白 */
+  padding: 0; /* 余白なし */
+}
+
+/* リストの項目 */
+.hobby-item {
+  background-color: #ff6347; /* トマト色の背景 */
+  color: white; /* 白い文字 */
+  padding: 15px; /* 内側の余白 */
+  margin: 10px 0; /* 上下の余白 */
+  font-size: 18px; /* 少し大きめの文字 */
+  font-weight: bold; /* 太字 */
+  text-align: center; /* 中央揃え */
+}
+
+/* ホバー効果（マウスを乗せた時） */
+.hobby-item:hover {
+  background-color: #ff4500; /* 少し濃い色に変化 */
+}
+
+/* 写真の設定 */
+.favorite-photo {
+  margin: 20px auto; /* 中央に配置 */
+  padding: 0; /* 余白なし */
+  width: 100%; /* 画像を画面幅いっぱいに拡大（縮小）する */
+}
+
+/* リンクの設定 */
+.external-link {
+  background-color: #9370db; /* 紫色の背景 */
+  color: white; /* 白い文字 */
+  padding: 15px 25px; /* 内側の余白 */
+  font-size: 18px; /* 少し大きめの文字 */
+  font-weight: bold; /* 太字 */
+  margin: 10px 0; /* 上下の余白 */
+  text-align: center; /* 中央揃え */
+}
+
+/* リンクのホバー効果 */
+.external-link:hover {
+  background-color: #8a2be2; /* 少し濃い紫色に変化 */
+}
+
+```
 
 ## 🔍 よくある間違い
 
