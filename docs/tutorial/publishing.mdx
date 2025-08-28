@@ -27,9 +27,12 @@ import QRCodeGenerator from '@site/src/components/QRCodeGenerator';
 
 ### 1. CodePenからファイルをエクスポート
 1. CodePenで作品を開く
-2. 「Export」ボタンをクリック
+2. 「Export」ボタンをクリック(下記画像参照)
 3. 「Export .zip」を選択
-4. ファイルをダウンロード
+4. ダウンロードしたファイルを右クリックしすべて展開を選択
+5. 新しくウインドウが開くので右下の展開をクリック
+
+![codepen image](../../static/img/codepen-1.png)
 
 ### 2. ファイルの確認
 ダウンロードしたZIPファイルには：
@@ -38,17 +41,6 @@ your-pen/
 ├── index.html
 ├── style.css
 └── script.js (もしあれば)
-```
-
-### 3. ファイルを整理
-```
-my-website/
-├── index.html      # メインページ
-├── style.css       # デザイン
-├── images/         # 画像フォルダ
-│   ├── profile.jpg
-│   └── background.png
-└── README.md       # 説明ファイル（オプション）
 ```
 
 ## 🐙 GitHubで公開する
@@ -62,13 +54,17 @@ my-website/
 2. **新しいリポジトリを作成**
    - 右上の「+」→「New repository」をクリック
    
+- ![github create new repository image](../../static/img/github-1.png)
+
 3. **リポジトリの設定**
    ```
-   Repository name: my-awesome-website
-   Description: 私の素敵なウェブサイト
+   Repository name: jikoshoukai
+   Description: 自己紹介ホームページ
    Public: ✅ (みんなに見せる)
    Add README: ✅
    ```
+
+- ![github create new repository image](../../static/img/github-2.png)
 
 4. **Create repository**をクリック
 
@@ -76,31 +72,41 @@ my-website/
 
 1. **「Upload files」をクリック**
    
+![github upload files description image](../../static/img/github-3.png)
+
 2. **ファイルをドラッグ＆ドロップ**
    - index.html
    - style.css
    - imagesフォルダ
    
+![github upload files description image](../../static/img/github-4.png)
+
 3. **コミットメッセージを書く**
    ```
-   最初のウェブサイトをアップロード！
+   自己紹介ページ新規作成
    ```
    
-4. **「Commit changes」をクリック**
+4. **緑のボタン「Commit changes」をクリック**
 
 ### ステップ3: GitHub Pagesを有効にする
 
 1. **Settings（設定）を開く**
    - リポジトリページの「Settings」タブをクリック
    
+![github upload files description image](../../static/img/github-5.png)
+
 2. **Pagesセクションを探す**
    - 左側のメニューから「Pages」をクリック
    
+![github upload files description image](../../static/img/github-6.png)
+
 3. **ソースを設定**
    - Source: Deploy from a branch
    - Branch: main
    - Folder: / (root)
    - 「Save」をクリック
+
+![github upload files description image](../../static/img/github-7.png)
 
 4. **URLを確認**
    ```
@@ -109,6 +115,10 @@ my-website/
 
 :::tip 💡 ポイント
 公開には数分かかることがあります。コーヒーでも飲んで待ちましょう！☕
+:::
+
+:::danger ⚠️ ページを非公開にするには？
+上記3.ソースコードを設定でBranchをNoneに変更してSaveボタンを押すと非公開にできます。非公開になるまで数分かかるので待ちましょう！
 :::
 
 ## 🎨 公開前のチェックリスト
